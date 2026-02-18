@@ -1,3 +1,10 @@
+:root {
+    --color-bg-1: #FFFAF5;
+    --color-bg-2: #FFF6ED;
+    --color-haeding: #000958;
+    --color-text: #656689;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,6 +18,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* Commom */
 h1,
 h2,
 h3,
@@ -18,6 +26,7 @@ h4,
 h5,
 h6 {
     font-family: "Sora", sans-serif;
+    color: var(--color-haeding);
 }
 
 input,
@@ -26,4 +35,76 @@ button,
 select {
     font-family: inherit;
     font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.btn {
+    --height: 56px;
+
+    display: inline-block;
+    height: var(--height);
+    line-height: var(--height);
+    min-width: 131px;
+    border: 1px solid rgba(0, 9, 88, .7);
+    border-radius: 99px;
+    color: var(--color-haeding);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+.btn:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+/* ========== Header ========== */
+.header {
+    background-color: var(--color-bg-1);
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 0;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.navbar__link,
+.header__signin {
+    color: #5E6085;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 8px 18px;
+}
+
+.navbar__link:hover {
+    color: var(--color-haeding);
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.header__signin:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.header__signup {
+    --height: 50px;
+    
+    min-width: 117px;
 }
