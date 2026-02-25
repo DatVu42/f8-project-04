@@ -3,6 +3,7 @@
     --color-bg-2: #FFF6ED;
     --color-haeding: #000958;
     --color-text: #656689;
+    --btn-bg: #FF5B2E;
 }
 
 * {
@@ -16,6 +17,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    background-color: var(--color-bg-1);
 }
 
 /* Commom */
@@ -50,7 +52,9 @@ a {
 .btn {
     --height: 56px;
 
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     height: var(--height);
     line-height: var(--height);
     min-width: 131px;
@@ -63,16 +67,29 @@ a {
     padding: 0 16px;
 }
 
+.btn--primary {
+    color: #fff;
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
+}
+
 .btn:hover {
     opacity: .9;
     cursor: pointer;
 }
 
-/* ========== Header ========== */
-.header {
+.btn__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     background-color: var(--color-bg-1);
+    margin-left: 10px;
 }
 
+/* ========== Header ========== */
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -98,6 +115,11 @@ a {
     text-shadow: 1px 0 0 currentColor;
 }
 
+.header__action {
+    display: flex;
+    align-items: center;
+}
+
 .header__signin:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -105,6 +127,162 @@ a {
 
 .header__signup {
     --height: 50px;
-    
+
     min-width: 117px;
+}
+
+/* ========== Hero ========== */
+.hero {
+    margin-top: 74px;
+}
+
+.hero__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 120px;
+}
+
+.hero__media {
+    position: relative;
+    display: flex;
+    padding-bottom: 94px;
+}
+
+.hero__img-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 388px;
+    height: 488px;
+    border-radius: 16px;
+    background-color: #FE997B;
+    border: 3px solid #fff;
+}
+
+.hero__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.hero__decor {
+    position: absolute;
+    z-index: -1;
+}
+
+.hero__decor-left {
+    left: -58px;
+    bottom: 10px;
+}
+
+.hero__decor-right {
+    top: 16px;
+    right: -42px;
+}
+
+.hero__img-wrap--small {
+    align-self: flex-end;
+    width: 186px;
+    height: 244px;
+    background-color: #FAA7AD;
+    margin: 0 0 -58px -23px;
+}
+
+.hero__pet-list {
+    position: absolute;
+    left: 129px;
+    bottom: 0;
+    width: 250px;
+    height: 156px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
+    padding: 18px 14px;
+}
+
+.hero__pet-item {
+    display: flex;
+    column-gap: 10px;
+}
+
+.hero__pet-thumb {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #FEC23F;
+}
+
+.hero__pet-item:nth-of-type(2) .hero__pet-thumb {
+    background-color: #C6E2FA;
+}
+
+.hero__pet-title {
+    color: #181E52;
+    font-family: Sora;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero__pet-skeleton {
+    width: 118px;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0.08;
+    background-color: var(--color-haeding);
+    margin-top: 6px;
+}
+
+.hero__pet-skeleton--short {
+    width: 39px;
+}
+
+.hero__pet-separator {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F2F2F2;
+    border-radius: 99px;
+    margin: 20px 0;
+}
+
+.hero__heading {
+    font-size: 6.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero__desc {
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.88;
+    margin-top: 24px;
+    max-width: 391px;
+}
+
+.hero__row {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    margin-top: 38px;
+}
+
+.hero__cta-btn {
+    --height: 60px;
+
+    min-width: 190px;
+    font-size: 1.6rem;
+}
+
+.hero__cta-link {
+    color: var(--color-haeding);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: underline;
 }
