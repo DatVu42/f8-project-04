@@ -1199,3 +1199,122 @@ a {
 }
 
 /* ========== Footer ========== */
+.footer {
+    margin-top: 78px;
+    background-image: linear-gradient(to right, #FFF6ED 42%, #FFFAF5 42%);
+}
+
+.footer__inner {
+    display: flex;
+}
+
+.footer__left {
+    width: 42%;
+    padding: 114px 0 148px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 268px;
+    height: 46px;
+    border-radius: 99px;
+    border: 1px solid rgba(255, 91, 46, 0.25);
+    background: #FFF;
+    margin: 40px 0 68px;
+}
+
+.subscribe-form__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 22px;
+    border-radius: inherit;
+}
+
+.subscribe-form__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--btn-bg);
+    border: none;
+    outline: none;
+    margin-right: -1px;
+}
+
+.subscribe-form__submit:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.subscribe-form__input::placeholder {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.16;
+}
+
+.footer__heading {
+    color: var(--color-haeding);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.11;
+}
+
+.social-list {
+    display: flex;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.social-item:hover {
+    opacity: .9;
+}
+
+.footer__menu {
+    margin: 52px 0 0 128px;
+}
+
+.footer__row {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 58px 137px;
+}
+
+.footer__list {
+    margin-top: 14px;
+}
+
+.footer__link {
+    color: var(--color-text);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.16;
+    margin: 52px 0 0 22px;
+}
